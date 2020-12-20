@@ -98,10 +98,10 @@ public class AndroidViewHintHelper {
             }
         });
         skipTv.setTag("HintView");
-        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(AndroidUtils.dpToPixel(skipTv.getContext(),48), AndroidUtils.dpToPixel(24));
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(AndroidUtils.dpToPixel(skipTv.getContext(),48), AndroidUtils.dpToPixel(skipTv.getContext(), 24));
         lp.gravity = Gravity.BOTTOM | Gravity.START;
         lp.leftMargin = AndroidUtils.dpToPixel(skipTv.getContext(),15);
-        lp.bottomMargin = AndroidUtils.dpToPixel(skipTv.getContext(),15) + AndroidUtils.getDeviceNavigationBarHeight();
+        lp.bottomMargin = AndroidUtils.dpToPixel(skipTv.getContext(),15) + AndroidUtils.getDeviceNavigationBarHeight(skipTv.getContext());
         skipTv.setLayoutParams(lp);
         return this;
     }
